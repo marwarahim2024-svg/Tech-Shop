@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page-2</title>
+    <!--Linking the css file-->
+    <link rel="stylesheet" href="html/style.css/style.css">
+    <!--adding icons-->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        section{
+            border: 1px solid rgb(0, 0, 0);
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .logo-name{
+            border: 1px solid rgb(0, 0, 0);
+            margin: 0px 3px;
+            padding: 5px;
+        }
+       .nav-icons {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    position: relative;
+}
+.nav-icons a {
+    color: white;
+    font-size: 20px;
+    position: relative;
+}
+        .container{
+          display: flex;
+        justify-content: space-between;
+        padding: 30px;
+        gap: 30px;
+        flex-wrap: wrap;
+        }
+        .cart-items{
+          flex-direction: column;
+          gap:0px;
+        }
+        .item{
+            background-color: #1c1c1c;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 20px;
+        }
+        .item img{
+             width: 100px;
+      height: auto;
+      border-radius: 8px;
+      margin-right: 20px;
+        }
+        .item .info{
+             flex-grow: 1;
+        }
+        .item .price{
+            font-size: 18px;
+        }
+        .old{
+            text-decoration: line-through;
+            color: gray;
+            font-size: 14px;
+        }
+        .quantity button{
+            padding: 5px 10px;
+            margin: 0 5px;
+            background: #333;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        .summary {
+    width: 100%;
+    max-width: 350px;
+    background: #1c1c1c;
+    padding: 25px;
+    border-radius: 12px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+    .summary h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding: 5px 0;
+}
+     .summary .green {
+    color: #00ff90;
+}
+    .summary .total {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+}
+     .summary .checkout {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+      
+        .footer{
+            display: flex;
+            justify-content: space-around;
+            background: #000;
+            padding: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .footer div{
+            min-width: 200px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        .footer div a{
+        
+            color: white;
+        }
+        .footer input{
+            padding: 8px;
+            margin-right: 5px;
+        }
+        .footer button{
+            background: red;
+            border: none;
+            padding: 8px 12px;
+            color: white;
+
+        }
+        .footer h4{
+            margin-bottom: 10px;
+        }
+        .footer-bottom p{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: start;
+          
+        }
+        .socials{
+            display: flex;
+        justify-content: space-between;   
+        align-items: end;     }
+
+
+        @media (max-width: 768px){
+            .container{
+                flex-direction: column;
+            }
+            .summary{
+                margin-left: 0;
+            }
+            .item{
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+            }
+            .item img{
+                width: 80%;
+            }
+        }
+        
+    </style>
+
+</head>
+<body>
+    <!--Header portion starts here-->
+    <section class="logo-name">
+        <h1>Tech-Shop</h1>
+    <!--Navbar starts here-->
+     <div class="nav-icons">
+        <a href="#"><i class="fas fa-search"></i></a>
+        <a href="#"><i class="fas fa-user"></i></a>
+
+        <div class="cart-icon">
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            <span class="cart-count">4</span>
+        </div>
+    </div>
+     </section>
+     <!--Header portion ends here-->
+     <main class="container">
+        <section class="cart-items">
+            <div class="item">
+                <img src="c:\Users\DFIT\Downloads\jbl660nc-1.png" alt="JBL Live 660NC Wireless Over-Ear NC Headphones" height="170px">
+            <div class="info">
+                <h2>JBL Live 660NC Wireless Over-Ear NC Headphones</h2>
+                <p class="price">$9,999<span class="old">$14,999</span></p>
+                <div class="quantity">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="item">
+                <img src="c:\Users\DFIT\Downloads\boat518-1.png" alt="boAT Rockerz 518 On-Ear Wireless Headphones" height="170px">
+            <div class="info">
+                <h2>boAT Rockerz 518 On-Ear Wireless Headphones</h2>
+                <p class="price">$1,299<span class="old">$3,990</span></p>
+                <div class="quantity">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--right side-->
+        <section class="summary">
+    <h2>Order Summary <span style="font-weight: normal;">(4 items)</span></h2>
+    
+    <div class="summary-line">
+        <span>Original Price</span>
+        <span>₹22,978</span>
+    </div>
+
+    <div class="summary-line">
+        <span>Discount</span>
+        <span class="green">-₹10,132</span>
+    </div>
+
+    <div class="summary-line">
+        <span>Delivery</span>
+        <span style="color: lightgreen;">Free</span>
+    </div>
+
+    <hr>
+
+    <div class="summary-line total">
+        <span>Total Price</span>
+        <span>₹12,846</span>
+    </div>
+
+    <button class="checkout">Checkout</button>
+</section>
+     </main>
+     <!--footer-->
+     <footer class="footer">
+        <div>
+            <h3>Tech-Shop</h3>
+            <p>Subscribe to our Email alerts to recieve early <br><br>discount offers,and new products info.</p>
+            <input type="text" placeholder="Email Address">
+            <br><br>
+            <button>Subscribe</button>
+        </div>
+
+        <div>
+            <h4>Help</h4>
+           <ul>
+                <li>
+                    <a href="">FAQs</a>
+                </li>
+                
+                 <li>
+                    <a href="">Track Order</a>
+                </li>
+
+                 <li>
+                    <a href="">Cancel Order</a>
+                </li>
+
+                 <li>
+                    <a href="">Return Order</a>
+                </li>
+
+                 <li>
+                    <a href="">Warranty Order</a>
+                </li>
+            </ul>
+         </div>
+         <div>
+            <h4>Policies</h4>
+            <ul>
+    
+                 <li>
+                    <a href="">Return Policy</a>
+                </li>
+
+                 <li>
+                    <a href="">Security</a>
+                </li>
+
+                 <li>
+                    <a href="">Sitemap</a>
+                </li>
+
+                 <li>
+                    <a href="">Privacy Policy</a>
+                </li>
+
+                 <li>
+                    <a href="">Terms and Conditions</a>
+                </li>
+
+                </li>
+            </ul>
+         </div>
+         <div>
+            <h4>Company</h4>
+           <ul>
+        
+                <li>
+                    <a href="">About Us</a>
+                </li>
+
+                 <li>
+                    <a href="">Contact Us</a>
+                </li>
+                 <li>
+                    <a href="">Service Centres</a>
+                </li>
+
+                 <li>
+                    <a href="">Careers</a>
+                </li>
+
+                 <li>
+                    <a href="">Affiliates</a>
+                </li>
+
+            
+               
+            </ul>
+         </div>
+           <div class="footer-bottom">
+      <p>2025 | All Rights Reserved ©.</p>
+      <div class="socials">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin"></i>
+      </div>
+    </div>
+     </footer>
+
+
+    
+</body>
+</html>

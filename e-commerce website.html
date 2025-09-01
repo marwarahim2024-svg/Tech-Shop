@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech-Shop</title>
+    <!--adding icons-->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body{
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+         
+        }
+        header{
+            border: 1px solid black;
+            padding: 5px;
+            margin: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            display:flex;
+           justify-content: space-between;
+           background-color: #000000;
+           color: white;
+           
+        }
+   .nav-icons {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+ position: relative;
+}
+.nav-icons a {
+    color: white;
+    font-size: 20px;
+    position: relative;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    align-content:flex-end ;
+
+}
+     
+        figure{
+           border:0px solid black;
+    padding: 18px;
+    margin: 31px;
+    width: 96.5%;
+
+    flex: 1;
+    box-sizing: border-box;
+    justify-content:space-around;
+
+   flex-direction: row;
+        
+            }
+           
+        section.featured-products{
+              width: 100%;
+    height: 100%;
+    background-color: black;
+    margin: 0px 3px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    gap: 0px;
+
+
+
+        }
+        h2{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+        }
+      .nav-products{
+        display: flex;
+         justify-content: space-evenly;
+        margin: 20px 0px;
+        flex-wrap: wrap;
+      
+      
+         
+        }
+        .nav-products button{
+           padding: 10px 20px;
+           background: transparent;
+           color: #ffffff;
+           border: 2px solid rgb(0, 0, 0);
+           cursor:pointer;
+        }
+        .nav-products button .active{
+            background: red;
+            color: white;
+        }
+
+       .nav-products button:hover{
+        background: red;
+        color: white;
+       }
+        
+
+
+       footer{
+         
+            padding: 5px;
+            margin: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            display:flex;
+            justify-content: space-evenly;
+            background-color: #000000;
+            color: white;
+        }
+
+       footer div{
+         border: 1px solid black;
+            padding: 5px;
+            margin: 10px;
+        flex: 1;
+        justify-content: center;
+        height: 300px;
+        align-content: center;
+        flex-flow: row wrap;
+        color: white;
+
+       }
+       footer div a{
+        color: white;
+       }
+       
+        .container {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    margin: auto;
+    display: flex
+;
+    display: grid
+;
+    grid-template-columns: repeat(4, 1fr);
+    color: white;
+    border: 1px solid rgb(0, 0, 0);
+    gap: 0px;
+    align-items: stretch;
+}div {
+    border: 0px solid black;
+    padding: 18px;
+    margin: 31px;
+    width: 96.5%;
+    float: none;
+    flex: 1;
+    box-sizing: border-box;
+    justify-content: center;
+}
+        .container .cards-12{
+            font-size: large;
+            justify-content: center;
+            text-align: center;
+           align-items: center;
+           color: #ffffff;
+        }
+        .cards {
+            background-color: #000000;
+             border: 0px solid rgb(0, 0, 0);
+             border-radius: 10px; 
+            padding: 20px;
+            text-align: center;
+        font-size: large;
+ text-align: center
+;
+        }
+         .old-price {
+            text-decoration: line-through;
+            font-size: 1rem;
+            color: gray;
+        }
+
+        .new-price {
+            font-size: larger;
+            font-weight: bold;
+            color: #ffffff;}
+
+        .stars{
+            color: red;
+            font-size: larger;
+        }
+        figure{
+            border: 1px solid white;
+            margin: auto;
+            padding: 10px;
+            height: 100%;
+            justify-content:space-around;
+           
+        
+        }
+        button{
+            background-color: red;
+            padding: 5px;
+            padding: 5px;
+            margin: 0px 3px;
+            width: 100%;
+        }
+      
+
+            
+     
+      .banner{
+        display: flex;
+        padding: 5px;
+        margin: auto;
+        background-color:#181818;
+        justify-content: space-between;
+        color: white;
+        flex-direction: row-reverse;
+        
+    }
+    .banner-img{
+        justify-content: end;
+        flex-direction: row;
+
+    }
+    .banner-description{
+        float: inline-start;
+        font-size: 45px;
+       justify-content: flex-start;
+    }
+    .banner-description .des-head{
+        font-size: 30px;
+    }
+    .banner-description .main-des{
+        font-size: 45px;
+        align-items: flex-start;
+    }
+    .banner-description .price{
+        font-size: larger;
+    }
+    .cards-3 .prices p{
+        font-size: 40px;
+        justify-content: center;
+
+
+    }
+    .footer-bottom{
+        justify-content: space-between;
+        align-items: start;
+
+    }
+    .footer-bottom .socials{
+        align-items: end;
+    }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <!--logo name-->
+            <h1>Tech-Shop</h1>
+        </div>
+    <!--Navbar-->
+       
+    <div class="nav-icons">
+        <a href="#"><i class="fas fa-search"></i></a>
+        <a href="#"><i class="fas fa-user"></i></a>
+
+        <div class="cart-icon">
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+     
+        </div>
+    </div>
+     </header>
+     <!--Banner portion starts here-->
+     
+    <section class="banner">
+        <div class="banner-img">
+        <img src="c:\Users\DFIT\Downloads\jbl660nc-1.png" alt="banner image" height="700px">
+        </div>
+        <div class="banner-description">
+        <div class="des-head">
+            <h5>JBL Live 660NC</h5><br><br>
+        </div>
+        <div class="main-des">
+        <figcaption> Keep The Noise Out,<br><br>Or In.You <br><br>Choose.</figcaption>
+        </div>
+        <div class="price">
+            <span class="old-price">₹14,999</span>
+            <span class="new-price">₹9,999</span> <br><br>
+        </div>
+            <button>Shop Now</button>
+        </div>
+    </section>
+
+        
+   
+     <!--banner portion ends here-->
+     <!--Featured products list starts here-->
+     <h2>Featured Products</h2>
+    <section class="featured-products">
+        <div class="cards">
+            <!--figure1-->
+            <figure >
+                <h3>boat Airdrops 203</h3>
+                <img src="c:\Users\DFIT\Downloads\boat203-1.png" alt="boat airdrops 203" height="200">
+                <figcaption>
+                    <span class="old-price">₹3,999</span>
+                    <span class="new-price">₹1,074</span>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards">
+ 
+            <!--figure2-->
+            <figure>
+                <h3>boAT Rockerz 518</h3>
+                <img src="c:\Users\DFIT\Downloads\boat518-1.png" alt="boAT Rockerz 518" height="200">
+                <figcaption>
+                    <span class="old-price">₹3,990</span>
+                    <span class="new-price">₹1,299</span>
+             </figcaption>
+            </figure>
+        </div>
+        <div class="cards">
+       
+            <!--figure3-->
+            <figure>
+     
+                <h3>JBL Tune 760NC</h3>
+                <img src="c:\Users\DFIT\Downloads\jbl760nc-1.png" alt="JBL Tune 760NC" height="200">
+                <figcaption>
+                    <span class="old-price">₹7,999</span>
+                    <span class="new-price">₹5,999</span>
+                </figcaption>
+            </figure>
+         </div>
+         <div class="cards">
+            <!--figure4-->
+    
+            <figure>
+                <h3>JBL Endurence Run Sports</h3>
+                <img src="c:\Users\DFIT\Downloads\jbl-endu-1.png" alt="JBL Endurence Run Sports" height="200">
+                <figcaption>
+                    <span class="old-price">₹1,599</span>
+                    <span class="new-price">₹999</span>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="cards">
+            <!--figure5-->
+            <figure>
+                <h3>boAT Rockerz 255</h3>
+                <img src="c:\Users\DFIT\Downloads\boat255r-1.png" alt="boAT Rockerz 255" height="200">
+                <figcaption>
+                    <span class="old-price">₹2,990</span>
+                    <span class="new-price">₹899</span>
+                </figcaption>
+            </figure>
+        </div>
+        
+      
+    </section>
+     <!--featured prodeucts end here-->
+
+     <!--top products list-->
+     <h2> Top Products</h2>
+     <div class="nav-products">
+        <button class="active">All</button>
+        <button>Earphones</button>
+        <button>Earbuds</button>
+        <button>Headphones</button>
+        <button>Neckbands</button>
+     </div>
+
+     
+     <!--top prodeucts cards-->
+    <div class="container">
+        <div class="cards-1">
+             <figure>
+                <img src="c:\Users\DFIT\Downloads\jbl660nc-1.png" alt="JBL Live 660NC" height="200">
+                <div class="stars">
+            ★★★★★
+        </div>
+        <h3>-JBL Live 660NC</h3>
+                <figcaption>Wireless Over-Ear NC<br><br>
+                Headphones</figcaption><br><br>
+                   <p> <div class="prices"><span class="new-price">₹9,999</span>
+                    <span class="old-price">₹14,999</span><br><br></div></p>
+                <button>Add To Cart</button>
+            </figure>
+        </div>
+        <div class="cards-2">
+             <figure>
+                <img src="c:\Users\DFIT\Downloads\boat518-1.png" alt="boAT Rockerz 518" height="200">
+                <div class="stars">
+            ★★★★★
+        </div>
+        <h3>boAT Rockerz 518</h3>
+                <figcaption>On-Ear Wireless Headphones</figcaption>
+                <br><br>
+                   <p> <div class="prices"><span class="new-price">₹1,990</span>
+                    <span class="old-price">₹3,950</span><br><br></div></p>
+                <button>Add To Cart</button>
+            </figure>
+        </div>     
+        <div class="cards-3">
+
+            <figure>
+                <img src="c:\Users\DFIT\Downloads\boat131-1.png" alt="boAT Airdropes 131" height="200">
+                <div class="stars">
+            ★★★★★
+        </div>
+        <h3>boAT Airdropes 131</h3>
+                <figcaption>Wireless In-Ear EarbudsC
+               </figcaption><br><br>
+                  <p> <div class="prices"> <span class="new-price">₹1,099</span>
+                    <span class="old-price">₹2,990</span><br><br></div></p>
+                <button>Add To Cart</button>
+            </figure>
+        </div>
+        <div class="cards-4">
+             <figure>
+                <img src="c:\Users\DFIT\Downloads\boat110-1.png" alt="boAT BassHeads 110" height="200">
+                <div class="stars">
+            ★★★★★
+        </div>
+        <h3>boAT BassHeads 110</h3>
+                <figcaption>In-Ear Wired Earphones</figcaption><br><br>
+                   <p> <div class="prices"><span class="new-price">₹449</span>
+                    <span class="old-price">₹999</span><br><br></div></p>
+                <button>Add To Cart</button>
+            </figure>
+        </div>
+        <div class="cards-5">
+             <figure>
+                <img src="c:\Users\DFIT\Downloads\boat410-1.png" alt="boAT Rockerz 410" height="200">
+                <div class="stars">
+            ★★★★★
+        </div>
+        <h3>boAT Rockerz 410</h3>
+                <figcaption>Blutooth & Wired On-Ear<br><br>
+                headphones</figcaption><br><br>
+                   <p><div class="prices"> <span class="new-price">₹1,599</span>
+                    <span class="old-price">₹2,990</span><br><br></div></p>
+                <button>Add To Cart</button>
+        </div>
+            </figure>
+        <div class="cards-6">
+
+            <figure>
+                <img src="c:\Users\DFIT\Downloads\sonyXb910n-1.png" alt="Sony WH-XB910N" height="200">
+                <div class="stars">
+            ★★★★★
+        </div>
+        <h3>Sony WH-XB910N</h3>
+                <figcaption>Wireless Over-Ear<br><br>
+                Headphones</figcaption><br><br>
+                    <p><div class="prices"><span class="new-price">₹13,489</span>
+                    <span class="old-price">₹19,990</span><br><br></div></p>
+                <button>Add To Cart</button>
+            </figure>
+        </div>
+        <div class="cards-7">
+             <figure>
+                <img src="c:\Users\DFIT\Downloads\jbl200bt-1.png" alt="JBL Live 200BT" height="200">
+                <div class="stars">
+            ★★★★★
+        </div>
+        <h3>-JBL Live 200BT</h3>
+                <figcaption>In-Ear Wireless Neckbands</figcaption><br><br>
+                    <p><div class="prices"><span class="new-price">₹3,699</span>
+                    <span class="old-price">₹5,290</span><br><br></div></p>
+                <button>Add To Cart</button>
+            </figure>
+        </div>
+        <div class="cards-8">     
+            <figure>
+                <img src="c:\Users\DFIT\Downloads\jbl760nc-1 (1).png" alt="JBLTune 760NC" height="200">
+                <div class="stars">
+            ★★★★★
+        </div>
+        <h3>JBLTune 760NC</h3>
+                <figcaption>Wireless Over-Ear NC<br><br>
+                Headphones</figcaption><br><br>
+                   <p><div class="prices"> <span class="new-price">₹5,999</span>
+                    <span class="old-price">₹7,990</span><br><br></div></p>
+                <button>Add To Cart</button>
+            </figure>
+        </div>
+        <div class="card-9">
+
+             <figure>
+                <img src="c:\Users\DFIT\Downloads\boat255r-1 (1).png" alt="boAT Rockerz 255" height="200">
+                <div class="stars">
+            ★★★★★
+        </div>
+        <h3>boAT Rockerz 255</h3>
+                <figcaption>In-Ear Wireless Neckbands</figcaption><br><br>
+                    <p><div class="prices"><span class="new-price">₹899</span>
+                    <span class="old-price">₹2,990</span><br><br></div></p>
+                <button>Add To Cart</button>
+            </figure>
+        </div>
+        <div class="cards-10">
+             <figure>
+                <img src="c:\Users\DFIT\Downloads\jbl100-1.png" alt="JBL Wave 100" height="200">
+                <div class="stars">
+            ★★★★★
+        </div>
+        <h3>JBL Wave 100</h3>
+                <figcaption>In-Ear truly Wireless Earbuds</figcaption><br><br>
+                    <p><div class="prices"><span class="new-price">₹2,990</span>
+                    <span class="old-price">₹6,999</span><br><br></div></p>
+                <button>Add To Cart</button>
+            </figure>
+        </div>
+        <div class="cards-11">
+            <figure>
+                <img src="c:\Users\DFIT\Downloads\sony1000xm4-1.png" alt="Sony WF-1000XM4" height="200">
+                <div class="stars">
+            ★★★★★
+        </div>
+        <h3>Sony WF-1000XM4</h3>
+                <figcaption>Wireless In-Ear NC<br><br>
+                Headphones</figcaption><br><br>
+                   <p> <div class="prices"><span class="new-price">₹19,990</span>
+                    <span class="old-price">₹24,990</span><br><br></div></p>
+                <button>Add To Cart</button>
+            </figure>
+        </div> 
+        <div class="cards-12">
+             <figure>
+                <a href="">Browse All Products</a>
+              
+            </figure>
+        </div>
+    </div>
+
+
+
+
+     <!--footer portion starts here-->
+     <footer>
+        <div>
+            <h1>Tech-Shop</h1>
+            <p>Subscribe to our Email alerts to recieve early discount offers,and new products info.</p>
+            <form>
+                <label>Email:</label>
+                <input type="text" name="Email">
+            </form>
+            <button>Subscribe</button>
+        </div>
+        <div>
+            <h3>Help</h3>
+            <ul>
+                <li>
+                    <a href="">FAQs</a>
+                </li>
+                
+                 <li>
+                    <a href="">Track Order</a>
+                </li>
+
+                 <li>
+                    <a href="">Cancel Order</a>
+                </li>
+
+                 <li>
+                    <a href="">Return Order</a>
+                </li>
+
+                 <li>
+                    <a href="">Warranty Order</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h3>Policies</h3>
+            <ul>
+    
+                 <li>
+                    <a href="">Return Policy</a>
+                </li>
+
+                 <li>
+                    <a href="">Security</a>
+                </li>
+
+                 <li>
+                    <a href="">Sitemap</a>
+                </li>
+
+                 <li>
+                    <a href="">Privacy Policy</a>
+                </li>
+
+                 <li>
+                    <a href="">Terms and Conditions</a>
+                </li>
+
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h3>Company</h3>
+            <ul>
+        
+                <li>
+                    <a href="">About Us</a>
+                </li>
+
+                 <li>
+                    <a href="">Contact Us</a>
+                </li>
+                 <li>
+                    <a href="">Service Centres</a>
+                </li>
+
+                 <li>
+                    <a href="">Careers</a>
+                </li>
+
+                 <li>
+                    <a href="">Affiliates</a>
+                </li>
+
+            
+               
+            </ul>
+        </div>
+         <div class="footer-bottom">
+      <p>2025 | All Rights Reserved ©.</p>
+      <div class="socials">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin"></i>
+      </div>
+     </footer>
+     <!--footer portion ends here-->
+
+   
+</body>
+</html>
